@@ -1,4 +1,4 @@
-🦎 Protean Interface Protocol (PIP)
+# Protean Interface Protocol (PIP)
 
 "The environment changes. The interface must adapt."
 
