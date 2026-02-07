@@ -41,23 +41,3 @@ PIP continuously monitors the environment and selects the most efficient renderi
 | **D: Brutalist** | 5% Battery / 2G | Raw Browser-Native HTML | Survival mode: text-only, zero lag |
 
 ---
-
-## ✨ Key Innovations
-
-### 1️⃣ The “Baton Pass” — State Persistence
-The most critical feature of PIP.
-
-When the UI switches from Tier A → Tier D:
-- ✅ **Focus Persistence** — Cursor remains in the same input
-- ✅ **Input Continuity** — No characters are lost mid-typing
-- ✅ **Zero Refresh** — DOM updates locally, no reload
-
-The user never notices the swap.
-
----
-
-### 2️⃣ Universal Intent Store
-Instead of hard-coding UI components, PIP stores **Intents**:
-
-```ts
-ACTION: SUBMIT_FORM
