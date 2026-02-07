@@ -1,0 +1,361 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
+    color: #330000;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.1);
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+
+.status-header {
+    background: linear-gradient(to right, #d32f2f, #ef5350);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.status-header h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.status-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cycle-display, .tier-display {
+    flex: 1;
+}
+
+.progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: white;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.tier-b {
+    background: #4caf50;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+
+.monitor, .visualizer, .transition-control, .performance {
+    padding: 15px;
+    border-bottom: 1px solid #ffeaea;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.metric {
+    margin-bottom: 20px;
+}
+
+.metric label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.slider-container {
+    position: relative;
+    margin: 10px 0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #ef5350, #4caf50);
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #d32f2f;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.metric-details {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+.phone-mockup {
+    border: 2px solid #d32f2f;
+    border-radius: 12px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.1);
+}
+
+.phone-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #d32f2f;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ef5350;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #d32f2f, #ef5350);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.tier-indicator {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ef5350;
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.toggle-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ef5350;
+    background: white;
+    border-radius: 8px;
+    color: #d32f2f;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: #d32f2f;
+    color: white;
+}
+
+.simulate-btn, .swap-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.simulate-btn:active, .swap-btn:active {
+    transform: scale(0.98);
+}
+
+.simulate-btn {
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    color: white;
+}
+
+.swap-btn {
+    background: linear-gradient(to right, #d32f2f, #b71c1c);
+    color: white;
+}
+
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.metric-card {
+    background: #fce4ec;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #d32f2f;
+}
+
+.metric-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.metric-value {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #d32f2f;
+    margin-top: 5px;
+}
+
+.success {
+    color: #4caf50;
+}
+
+
+.navigation {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 335px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    box-shadow: 0 -4px 20px rgba(211, 47, 47, 0.1);
+    overflow: hidden;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-btn.active {
+    background: #fff5f5;
+    color: #d32f2f;
+    font-weight: 600;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ffeaea;
+    border-top: 5px solid #d32f2f;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .navigation {
+        width: 100%;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
